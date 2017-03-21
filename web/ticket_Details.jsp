@@ -56,10 +56,11 @@ h3 {
               ResultSet rs=null;
             
             try{
-            Class.forName("com.microsoft.jdbc.sqlserver.SQLServerDriver");
             
-            con=DriverManager.getConnection("jdbc:sqlserver://localhost:49160;user=sa;password=9969440818;databaseName=Cinema");
-            
+                Class.forName("com.mysql.jdbc.Driver");
+                      
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Cinema","root","Password@17");
+                
             if(con!=null){
                 stmt=con.createStatement();
                 String rsql="select distinct t.t_id,u.name,m.m_name,t.date,m.m_time,t.no_of_tickets,t.total_cost from Ticket  t, Movie m, Users u where t.user_id='"+u_id+"' and t.m_id=m.m_id and u.name='"+u_name+"' order by t.t_id desc";

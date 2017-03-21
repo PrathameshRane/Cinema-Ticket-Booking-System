@@ -37,9 +37,10 @@ a:active {
               ResultSet rs=null;
               
                
-            Class.forName("com.microsoft.jdbc.sqlserver.SQLServerDriver");
-            
-            con=DriverManager.getConnection("jdbc:sqlserver://localhost:49160;user=sa;password=9969440818;databaseName=Cinema");
+             Class.forName("com.mysql.jdbc.Driver");
+                      
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Cinema","root","Password@17");
+                       
             
             
                 stmt=con.createStatement();

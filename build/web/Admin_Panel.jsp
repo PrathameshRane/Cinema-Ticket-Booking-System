@@ -75,11 +75,9 @@ a:active {
   <tr>
       <td><a href="Movie_info2.jsp"><b>--> Movie_info</b></a></td></tr>
     <tr><td></td></tr>  
-    <tr><td><a href="AddNewMovie.jsp"><b>--> Add New Movies</b></a></td></tr>
+    <tr><td><a href="AddNewMovie.jsp"><b>--> Add New Movie Shows</b></a></td></tr>
   <tr><td></td></tr>
-  <tr><td><a href="DeleteMovie.jsp"><b>--> Delete Movie</b></a></td></tr>
-  <tr><td></td></tr>
-  <tr><td><a href="UpdateMovie.jsp"><b>--> Update Movie</b></a></td></tr>
+  <tr><td><a href="UpdateMovie.jsp"><b>--> Update Movie Info</b></a></td></tr>
       <tr><td></td></tr>
       <tr><td><a href="Show_tickets.jsp"><b>--> Show Tickets Booked</b></a></td></tr>
 </table>

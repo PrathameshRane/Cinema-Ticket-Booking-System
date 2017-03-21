@@ -24,10 +24,9 @@
     <br>
     <br>
     <marquee> 
-        <img src="images/NH10.jpg" height="150" width="150">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-        <img src="images/Gabbar.jpg" height="150" width="150">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="images/M.S.Dhoni.jpg" height="150" width="150">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="images/Raees.jpg" height="150" width="150">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="images/bardi.jpg" height="150" width="150">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        <img src="images/kong.jpg" height="150" width="150">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="images/logan.jpg" height="150" width="150">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </marquee>
     <br>
     <br>

@@ -48,6 +48,12 @@ h3 {
                 <p class="contact"><label> Movie Name:</label></p>    
                 <input type="text" placeholder="Name of Movie" name="m_name" value="">
                 
+                <p class="contact"><label>Shows Availability:</label></p> 	    
+                 <select class="select-style" name="available">
+                    <option value="Available">Available</option>
+                    <option value="Not Available">Not Available</option>
+                 </select>
+                <br><br> 
                 <p class="contact"><label>Movie Center:</label></p> 	    
                  <select class="select-style" name="m_center">
                     <option value="CINEMAX-Goregoan">CINEMAX-Goregoan</option>
@@ -61,7 +67,7 @@ h3 {
                  </select>
                 <br><br>                                   
                <p class="contact"><label>Release Date:</label></p> 
-               <input type="text" placeholder="Eg. 28-02-2014" name="m_date" value="">
+               <input type="text" placeholder="Eg. 28-02-2017" name="m_date" value="">
                 
                <p class="contact"><label> Show Time:</label></p> 	    
                 <select class="select-style" name="m_time">                  

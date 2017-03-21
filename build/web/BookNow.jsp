@@ -37,6 +37,16 @@ var c = parseInt(a)* parseInt(b);
 document.getElementById("text3").value = c; 
  
 } 
+
+function validateCard()
+{
+    var c = document.getElementById("card_no").value; 
+    
+    if(c.length!==16){
+        
+        alert("Card number should be 16 digit");
+    }
+}
 </script> 
 
     </head>    
@@ -47,7 +57,7 @@ document.getElementById("text3").value = c;
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href='index.jsp'><img src="images/Home.gif"></a>&nbsp;&nbsp;&nbsp;&nbsp; 
+    <a href='User_Home.jsp'><img src="images/Home.gif"></a>&nbsp;&nbsp;&nbsp;&nbsp; 
     <a href='Movie_info.jsp'><img src="images/Movies.gif"></a>&nbsp;&nbsp;&nbsp;&nbsp; 
     <a href='User_Panel.jsp'><img src="images/User_Panel.gif"></a>&nbsp;&nbsp;&nbsp;&nbsp;
     <a href='About_us.jsp'><img src="images/about.gif"></a>&nbsp;&nbsp;&nbsp;&nbsp; 
@@ -69,8 +79,9 @@ document.getElementById("text3").value = c;
               ResultSet rs=null;
             
             try{
-            Class.forName("com.microsoft.jdbc.sqlserver.SQLServerDriver");
-            con=DriverManager.getConnection("jdbc:sqlserver://localhost:49160;user=sa;password=9969440818;databaseName=Cinema");
+            Class.forName("com.mysql.jdbc.Driver");
+                      
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Cinema","root","Password@17");
             
         if(m_id!=null)
         {
@@ -115,11 +126,13 @@ document.getElementById("text3").value = c;
             <input id="text3" name="total_cost" value="" type="text">
 
 	    <p class="contact"><label for="Cardno"> Card no :</label></p> 
-            <input type="text" name="card_no" value="">
+            <input type="text" id="card_no" name="card_no" value="" onchange="validateCard()">
                         
 	    <p class="contact"><label for="Cardtype"> Card type :</label></p> 
-            <input type="radio" name="card_type" value="credit"><label>Credit Card</label>
-	    <input type="radio" name="Card_type" value="debit"><label>Debit Card</label>
+            <select class="select-style" name="card_type">
+                 <option value="Debit Card">Debit Card</option>
+                 <option value="Credit Card">Credit Card</option>
+             </select>
 
 	    <p class="contact"><label for="BankName"> Bank Name :</label></p> 	    
             <select class="select-style" name="bank_name">

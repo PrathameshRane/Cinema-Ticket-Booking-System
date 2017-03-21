@@ -49,22 +49,23 @@ h3 {
                 String m_date=request.getParameter("m_date");
                 String m_time=request.getParameter("m_time");
                 String ticket_cost=request.getParameter("ticket_cost");
-                String poster=request.getParameter("poster");
+                String available=request.getParameter("available");
                 
               Connection con =null;
               Statement stmt = null;
               
               
             try{
-            Class.forName("com.microsoft.jdbc.sqlserver.SQLServerDriver");
-            
-            con=DriverManager.getConnection("jdbc:sqlserver://localhost:49160;user=sa;password=9969440818;databaseName=Cinema");
-            
+           
+              Class.forName("com.mysql.jdbc.Driver");
+                      
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Cinema","root","Password@17");  
+                
             if(con!=null){
                  stmt=con.createStatement();
                  
                  //insert and executes query
-                 int i =stmt.executeUpdate("insert into Movie(m_name,m_center,m_time,m_date,ticket_cost)values('"+m_name+"','"+m_center+"','"+m_time+"','"+m_date+"','"+ticket_cost+"')");        
+                 int i =stmt.executeUpdate("insert into Movie(m_name,m_center,m_time,m_date,ticket_cost,available)values('"+m_name+"','"+m_center+"','"+m_time+"','"+m_date+"','"+ticket_cost+"','"+available+"')");        
                
                  %>
                  <center>

@@ -16,6 +16,21 @@
         %>
        
          <style type="text/css">
+             
+a {
+color: #CC0000;
+}
+             
+a:link {
+color: #CC0000;
+}
+a:visited {
+color: #999999;
+}
+a:hover {
+color: #FF3300;
+}
+
 h3 {
 	color:#ffffff;
 	font-family: cursive;
@@ -55,10 +70,12 @@ h3 {
               
               
             try{
-            Class.forName("com.microsoft.jdbc.sqlserver.SQLServerDriver");
             
-            con=DriverManager.getConnection("jdbc:sqlserver://localhost:49160;user=sa;password=9969440818;databaseName=Cinema");
-            
+                Class.forName("com.mysql.jdbc.Driver");
+                      
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Cinema","root","Password@17");
+                
+                
             if(con!=null){
                  
                  String sql=("delete from Ticket WHERE t_id='"+t_id+"'");
@@ -69,11 +86,11 @@ h3 {
                
              %>
              <center>
-            <h3> Ticket Cancelled.</h3>
+            <h3> Ticket Canceled.</h3>
             <br><br>
                  <h3>Your money will be refunded.</h3>
                  <br><br>
-                 <h2><a href="User_Panel.jsp">Go Back.</a></h2>
+                 <h2 ><a href="User_Panel.jsp">Go Back.</a></h2>
                <% }
 
             if(con==null)

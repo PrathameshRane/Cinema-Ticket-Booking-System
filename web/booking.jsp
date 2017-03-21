@@ -37,9 +37,9 @@
               
               
             try{
-            Class.forName("com.microsoft.jdbc.sqlserver.SQLServerDriver");
-            
-            con=DriverManager.getConnection("jdbc:sqlserver://localhost:49160;user=sa;password=9969440818;databaseName=Cinema");
+            Class.forName("com.mysql.jdbc.Driver");
+                      
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Cinema","root","Password@17");
             
             if(con!=null){
                  stmt=con.createStatement();
@@ -47,7 +47,7 @@
                  //insert and executes query
                  int i =stmt.executeUpdate("insert into Ticket(user_id,m_id,date,no_of_tickets,total_cost)values('"+u_id+"','"+m_id+"','"+m_date+"','"+no_of_tickets+"','"+total_cost+"')");
         
-                 int c=stmt.executeUpdate("insert into Credit_Card(card_no,user_id,card_type,bank_name,exp_date)values('"+card_no+"','"+u_id+"','"+card_type+"','"+bank_name+"','"+exp_date+"')");
+                 int c=stmt.executeUpdate("insert into Credit_Card(card_no,username,card_type,bank_name,exp_date)values('"+card_no+"','"+u_id+"','"+card_type+"','"+bank_name+"','"+exp_date+"')");
             
                  
                   response.sendRedirect("Ticket.jsp");
